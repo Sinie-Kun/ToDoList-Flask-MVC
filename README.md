@@ -46,8 +46,8 @@ style.css: Sert à styliser les pages html de notre application.
   
 ## Utilisation de la ToDo List
 
+Vous voici sur la ToDo liste:
 ![accueil de la ToDoList](Flask_ToDoList/readme/accueil.PNG)
-Vous voici sur la ToDo liste.
 
 ### Ajout de tâches
 ![ajout de tâche](Flask_ToDoList/readme/AjoutdeTache.PNG)  
