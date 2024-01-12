@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TO-DO List</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <h1>TO-DO List</h1>
+    <form action="/add_task" method="post">
+        <input type="text" name="title" placeholder="Titre">
+        <input type="text" name="description" placeholder="Nouvelle tâche">
+        <input type="date" name="deadline" placeholder="Deadline">
+        <button type="submit">Ajouter</button>
+    </form>
+    {% if error_message %}
+    <p>{{ error_message }}</p>
+    {% endif %}
+    <ul id="taskList">
+        {% for task in tasks %}
+        <li class="{% if task.completed %}completed{% endif %}">
+            <form action="/complete_task" method="post" style="display: inline;">
+                <input type="hidden" name="id" value="{{ task.id }}">
+                <label>
+                    <input type="checkbox" name="completed" {% if task.completed %}checked{% endif %} onchange="this.form.submit()">
+                </label>
+            </form>
+            <span>Titre: {{task.title}}</span><br>
+            <span>Description: {{ task.description }}</span><br>
+            <span class="deadline">Deadline: {{ task.deadline }}</span><br>
+            <form action="/edit_task/{{ task.id }}" method="get" style="display: inline;">
+                <button type="submit">Modifier</button>
+            </form>
+            <form action="/delete_task" method="post" style="display: inline;">
+                <input type="hidden" name="id" value="{{ task.id }}">
+                <button type="submit">Supprimer</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>
