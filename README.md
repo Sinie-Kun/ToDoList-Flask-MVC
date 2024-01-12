@@ -50,7 +50,7 @@ style.css: Sert à styliser les pages html de notre application.
 Vous voici sur la ToDo liste.
 
 ### Ajout de tâches
-![ajout de tâche](Flask_ToDoList/readme/AjoutdeTache.PNG)
+![ajout de tâche](Flask_ToDoList/readme/AjoutdeTache.PNG)  
 Afin d’ajouter une tâche, vous devez remplir tous les champs et cliquer sur “Ajouter”.  
 **Attention**: S’il reste des champs vides lors de la validation, un message d’erreur sera affiché et la tâche ne sera pas ajoutée.  
 De la même manière, si vous entrez une deadline pour une date déjà passée, le site vous
@@ -58,11 +58,22 @@ affichera un message d’erreur et la tâche ne sera pas ajoutée.
 
 
 ### Affihcage des tâches
-![ajout de tâche](Flask_ToDoList/readme/Listetaches.PNG)
+![ajout de tâche](Flask_ToDoList/readme/Listetaches.PNG)  
 Ici va s’afficher la liste des tâches, leur affichage comprend: le titre, la description ainsi que la deadline.  
 À côté du titre vous avez une checkbox qui sert à compléter une tâche, lorsque vous avez
 fini votre tâche, vous cochez la checkbox ce qui aura pour effet de barrer la tâche et
 de la replacer à la fin de la liste des tâches.
 Vous avez ensuite les deux boutons “Modifier” et “Supprimer”
+
+### Suppression d'une tâche  
+Le bouton “Supprimer” va simplement supprimer la tâche de la base de données ainsi que dans la liste de tâches affichée sur la page
+
+### Modification d'une tâche  
+Le bouton “Modifier” va ouvrir la seconde page html permettant l'édition de la tâche choisie:
+![ajout de tâche](Flask_ToDoList/readme/modificationtache.PNG)  
+Vous aurez donc la possibilité de modifier les caractéristiques apparentes de votre tâche,
+tels le titre, la description et la deadline.  
+En appuyant sur “Enregistrer” la tâche sera alors modifiée et vous retournerez
+automatiquement sur la page d’affichage des tâches.
 
 
