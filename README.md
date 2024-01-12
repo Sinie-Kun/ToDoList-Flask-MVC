@@ -45,3 +45,24 @@ style.css: Sert à styliser les pages html de notre application.
 - Cliquez sur le lien qui suit "Running on"
   
 ## Utilisation de la ToDo List
+
+![accueil de la ToDoList](Flask_ToDoList/readme/accueil.PNG)
+Vous voici sur la ToDo liste.
+
+### Ajout de tâches
+![ajout de tâche](Flask_ToDoList/readme/AjoutdeTache.PNG)
+Afin d’ajouter une tâche, vous devez remplir tous les champs et cliquer sur “Ajouter”.  
+**Attention**: S’il reste des champs vides lors de la validation, un message d’erreur sera affiché et la tâche ne sera pas ajoutée.  
+De la même manière, si vous entrez une deadline pour une date déjà passée, le site vous
+affichera un message d’erreur et la tâche ne sera pas ajoutée.
+
+
+### Affihcage des tâches
+![ajout de tâche](Flask_ToDoList/readme/Listetaches.PNG)
+Ici va s’afficher la liste des tâches, leur affichage comprend: le titre, la description ainsi que la deadline.  
+À côté du titre vous avez une checkbox qui sert à compléter une tâche, lorsque vous avez
+fini votre tâche, vous cochez la checkbox ce qui aura pour effet de barrer la tâche et
+de la replacer à la fin de la liste des tâches.
+Vous avez ensuite les deux boutons “Modifier” et “Supprimer”
+
+
